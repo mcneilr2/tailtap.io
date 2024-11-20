@@ -24,27 +24,27 @@ Whether you are a first time skater or a pro, it can be an arduous and often fru
 ### Features
 
 As a user:
-    -I want to be able to find the closest
+    - I want to be able to find the closest
     skate spots to my current location
-    -I want to be able to find the closest skate spots to any given location
-    -I would like to access information regarding these spots such as;
-        -Detailed descriptions of features
-        -Detailed photos of features
-        -Accessibility information
-        -General spot occupancy
-        -Median spot skill level
-        -Social media links to associated skate groups
-        -Posted videos from other skaters from the spot
-    -I would like to be able to filter by the following information
-        -distance from location
-        -specified skate features
-        -accessibility features
-        -General spot occupancy
-        -Median spot skill level
+    - I want to be able to find the closest skate spots to any given location
+    - I would like to access information regarding these spots such as;
+        - Detailed descriptions of features
+        - Detailed photos of features
+        - Accessibility information
+        - General spot occupancy
+        - Median spot skill level
+        - Social media links to associated skate groups
+        - Posted videos from other skaters from the spot
+    - I would like to be able to filter by the following information
+        - distance from location
+        - specified skate features
+        - accessibility features
+        - general spot occupancy
+        - median spot skill level
     
 
 As a logged in user, I want all the abilities of the regular user as well as
-    -I want to be able to post videos on skate spot pages of me skating at that location
+    - I want to be able to post videos on skate spot pages of me skating at that location
 
 ## Implementation
 
