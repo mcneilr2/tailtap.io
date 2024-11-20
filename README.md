@@ -108,10 +108,10 @@ https://developers.google.com/maps/documentation/geocoding/overview#:~:text=The%
 ![](view-spots.png)
 
 #### View Spot Page (Authorized User)
-![](view-spot-auth.png)
+![](view_spot_auth.png)
 
 #### View Spot Page
-![](view-spot.png)
+![](view_spot.png)
 
 ### Data
 
