@@ -10,20 +10,21 @@ TailTap is a platform for skateboarders to find and share information regarding 
 As a potential, beginner or experienced skateboarder, finding the right skate spot/skate features and accessibility features is integral to your progression in the sport.  Morevoer, as the skateboarding community calls these skate spots home, access to these spaces becomes integral to finding your skate community as well,
 which is one of the best parts of the sport.
 
-Whether you are a first time skater or a pro, it can be an arduous and often fruitless search through google maps, instagram, twitter and the like to find your next spot both at home and while travelling.  Each skateboarder requires a unique variety of skate features, accessibility features and diversity of community at different points in their life to get the most out of the activity.  Finding skate spots to accomodate those needs can be overwhelming and stressfull, detracting from the purpose of the activity which is fun.  There is no current single location to find this information, and there is nothing worse than skating 2 hours to a spot only to find out the google maps photos were outdated and they ripped out your favorite feature.
+Whether you are a first time skater or a pro, it can be an arduous and often fruitless search through google maps, instagram, twitter and the like to find your next spot both at home and while travelling.  Each skateboarder requires a unique variety of skate features, accessibility features and diversity of community at different points in their life to get the most out of the activity.  Finding skate spots to accomodate those needs can be overwhelming and stressfull, detracting from the purpose of the activity which is fun.  
+
+There is no current single location to find this information, and there is nothing worse than skating 2 hours to a spot only to find out the google maps photos were outdated and they ripped out your favorite feature.
 
 ### User Profile
--Potential skateboarders
--Current skateboarders
-    -looking to find new spots to skate
-    -looking for certain features to skate
-    -looking for people to skate with
-    -looking to have a place to share and find skate footage
+- Potential and current skateboarders who are
+    - looking to find new spots to skate
+    - looking for certain features to skate
+    - looking for people to skate with
+    - looking to have a place to share and find skate footage
 
 
 ### Features
 
--As a user;
+-As a user
 
     -I want to be able to find the closest
     skate spots to my current location
@@ -107,13 +108,13 @@ https://developers.google.com/maps/documentation/geocoding/overview#:~:text=The%
 ![](enter-location.png)
 
 #### View Spots Page
-![](view-spots.png)
+![](view_spots.png)
 
 #### View Spot Page (Authorized User)
-![](view-spot-auth.png)
+![](view_spot_auth.png)
 
 #### View Spot Page
-![](view-spot.png)
+![](view_spot.png)
 
 ### Data
 
