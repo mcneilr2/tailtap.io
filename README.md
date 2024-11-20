@@ -23,7 +23,7 @@ Whether you are a first time skater or a pro, it can be an arduous and often fru
 
 ### Features
 
-As a user:
+- As a user:
     - I want to be able to find the closest
     skate spots to my current location
     - I want to be able to find the closest skate spots to any given location
