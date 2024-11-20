@@ -43,7 +43,7 @@ Whether you are a first time skater or a pro, it can be an arduous and often fru
         - median spot skill level
     
 
-As a logged in user, I want all the abilities of the regular user as well as
+- As a logged in user, I want all the abilities of the regular user as well as
     - I want to be able to post videos on skate spot pages of me skating at that location
 
 ## Implementation
