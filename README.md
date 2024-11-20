@@ -1,86 +1,331 @@
-# TailTap.io
+# Project Title
+TailTap.io
 
 ## Overview
 
-My app is primarily used to connect skateboarders to each other by providing a platform for sharing information about skateboarding locations, and most importantly: sharing trick footage.
+TailTap is a platform for skateboarders to find and share information regarding skateboarding locations.
 
 ### Problem Space
 
-The problem space is defined by a general lack of tech enabled products marketed towards skateboarders, or towards the skatebaording community in general.  There is no question that investment in the sport is justified (Vanity Fair purchased Vans in the early 2000, skateboarding entered the Olympics in 2020), but that investment seems decidedly directed at corporate support, rather than in the community itself.  Therfore the problem space is defined as a lack of tech-enabled products directed at enabling new, current and potential skateboarders.
+As a potential, beginner or experienced skateboarder, finding the right skate spot/skate features and accessibility features is integral to your progression in the sport.  Morevoer, as the skateboarding community calls these skate spots home, access to these spaces becomes integral to finding your skate community as well,
+which is one of the best parts of the sport.
 
-Who will use your app? How will they use it? Add any special considerations that your app must take into account.
-Who? Anyone wishing to learn to skateboard, or anyone who wants to continue learning to skateboard.
+Whether you are a first time skater or a pro, it can be an arduous and often fruitless search through google maps, instagram, twitter and the like to find your next spot both at home and while travelling.  Each skateboarder requires a unique variety of skate features, accessibility features and diversity of community at different points in their life to get the most out of the activity.  Finding skate spots to accomodate those needs can be overwhelming and stressfull, detracting from the purpose of the activity which is fun.  There is no current single location to find this information, and there is nothing worse than skating 2 hours to a spot only to find out the google maps photos were outdated and they ripped out your favorite feature.
+
+### User Profile
+-Potential skateboarders
+-Current skateboarders
+    -looking to find new spots to skate
+    -looking for certain features to skate
+    -looking for people to skate with
+    -looking to have a place to share and find skate footage
+
 
 ### Features
 
-List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
+- As a user:
+    - I want to be able to find the closest
+    skate spots to my current location
+    - I want to be able to find the closest skate spots to any given location
+    - I would like to access information regarding these spots such as;
+        - Detailed descriptions of features
+        - Detailed photos of features
+        - Accessibility information
+        - General spot occupancy
+        - Median spot skill level
+        - Social media links to associated skate groups
+        - Posted videos from other skaters from the spot
+    - I would like to be able to filter by the following information
+        - distance from location
+        - specified skate features
+        - accessibility features
+        - general spot occupancy
+        - median spot skill level
+    
 
-1) Person 1 (Alex): Alex is an intermediate skateboarder.  He loves to skate when he travels for work, so he always brings his board w him.
-He loves to try new parks when he travels, so hes always trying to look up photos/videos of people skating in the areas hes going.
-Hes travelling to Vancouver for a conference in November, and he really wants to get some great skate footage while hes there.  
-He dowloads TailTap.io and finds a map on the main page.  He finds the general area near his hotel on the app and sees that there are 2
-skateparks and 5 street spots within 10 minutes skate of his hotel.  He really wants to skate bowl this weekend so he uses a filter bar tools
-filter for locations with bowl features, which narrows it down to the 2 parks.  Alex is autistic, so loud, busy parks are not his thing.
-He sees that one of the 2 parks has the highest rating for "business" at this time and the average skill level is listed as "high".  Alex
-decides to skate at the other park instead, which has a rating of "quiet" with an average skill level of "intermediate".  He gets there,
-and enjoys himself skating the bowl and taking photos of the cool graphiti.  He makes a new friend at the skatepark and thay add each other on TailTap
-and Instagram.  Alex and his new friend film each other skating the bowl and post it on tailtap under the park's page for the next friends to find.
-
-
-2) Person 2(Devon): Devon has never skateboarded before.  They think it looks really fun, and they got a skateboard for their birthday, but
-they are not sure of where to begin, or where to go where they can practice.  They download the TailTap.io app and look for skatespots in their
-area.  They find a skatespot with a good reviews for beginners, so they go to the spot page.  They find that there is an LGBTQAI+ group
-for beginners that meets there every sunday.  Excited to meat new friends, Devon finds the queer group admins on instagram through TailTap
-and messages them asking if anyone in the group knows ASL.  The admin informs them that they don't have anyone in the group that is deaf, but
-they know a really awesome deaf skateboarder in New York that has some awesome footage.  Devon adds this person on TailTap and messages them
-saying they are starting out and really excited.  Devon is excited to go to the next skate meetup and start trying some of the tricks they
-have seen their new friend doing on TailTap in New York.
-
-
-3) Person 3(Naaba): Naaba is in her 50's lives in Vancouver with teenage kids.  Her son loves skateboarding, and she has started standing on 
-the skateboard while her son holds her hands when he brings out the skateboard to the living room.  She really likes the feeling of balancing on the board,
-and how fluid she feels moving back and forth between turns while she laughs with her son.  She would love to be able to skateboard with him
- down the street, but she has never seen anyone that looks like her on a skateboard, and she doesnt know if she has the right shoes.
- Her son recommends the TailTap app, and she downloads it onto her phone.  She looks up spots in her area, and sees a local skatepark that
- has great reviews for beginners.  She notices that a few of the videos from the spot are posted by another woman in the area that looks
- about her age.  She messages the woman on TailTap and it turns out, she is also a mom in the area who has been skating for years.  Nabaa
- makes fast friends with the other skate mom, and they meet up each saturday afternoon to have lunch and practice skateboarding together
- at the park.  Naaba doesn't like to do tricks, but thouroughly enjoys cruising around the park while her friend tries new tricks.  Each week,
- they post new pictures at the park together, and 2 weeks ago, another mom decided to join them after Naaba told her how much fun they
- were having.
+- As a logged in user, I want all the abilities of the regular user as well as
+    - I want to be able to post videos on skate spot pages of me skating at that location
 
 ## Implementation
 
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
+Front End
+- React w Typescript + Vite
+- Client libraries: 
+    - react
+    - react-router
+    - axios
+
+Back End
+- Sqlite3 DB
+- Node.js architecture
+- Server libraries:
+    - knex
+    - express
+    - bcrypt for password hashing
+
+Deployement
+- Heroku
+- Netlify
+- Github
+
 
 ### APIs
 
-List any external sources of data that will be used in your app.
+1. Google Distance Matrix API:
+https://developers.google.com/maps/documentation/distance-matrix/overview
+
+2. Google Geocoding API:
+https://developers.google.com/maps/documentation/geocoding/overview#:~:text=The%20Geocoding%20API%20is%20a,Place%20ID%20into%20an%20address.
+
 
 ### Sitemap
 
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
+- Home Page
+- List Spots
+- Spot Page
+- Register
+- Login
+- Upload Form/Page
+
 
 ### Mockups
 
-Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
+#### Landing Page
+![](landing_page.png)
+
+#### Register Page
+![](create-user-page.png)
+
+#### Login Page
+![](login_page.png)
+
+#### Enter Location Page
+![](enter-location.png)
+
+#### View Spots Page
+![](view-spots.png)
+
+#### View Spot Page (Authorized User)
+![](view_spot_auth.png)
+
+#### View Spot Page
+![](view_spot.png)
 
 ### Data
 
-Describe your data and the relationships between the data points. You can show this visually using diagrams, or write it out. 
+![](schema.png)
 
 ### Endpoints
 
-List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
+**GET /spots**
+
+- Get spots
+
+Parameters:
+- longitude: User-provided location as a number
+- latitude: User-provided location as a number
+
+Response:
+```
+    {
+        "id": 1,
+        "name": "Plaza Skatepark",
+        "distance": 0.25,
+        "parking": "google_maps_image.svg",
+        "isLitNight" : true,
+        "weatherCoverage": "partial",
+        "is_public": true,
+        "hours": "24/7"
+        "occupancyLevel": .9,
+        "medianSkill": .75,
+        "homepage_photo": "spot_hero.svg"
+        "address": "555 Road Rash Avenue"
+    },
+    ...
+
+```
+
+**GET /spots/:id/features**
+
+- Get features by spot id
+
+Parameters:
+- id: Spot id as a number
+
+Response:
+```
+{
+    "id": 1,
+    "spotId": 1,
+    "featureId": 1,
+    "name": "Red Hand Rail",
+    "photo": "red_hand_rail.svg",
+    "category": "rails",
+    "difficulty": .5
+} ...
+```
+
+**GET /spots/:id/footage**
+
+- Get footage by spot id
+
+Parameters:
+- id: Spot id as a number
+
+Response:
+```
+{
+    "id": 1,
+    "spotId": 1,
+    "featureId" 1,
+    "userId" 1,
+    "title": "Huge bail on the red hand rail!"
+    "footage": "user1Video1.mp4"
+    "user": "CementSurfer"
+    "postDate": "April 1st, 2024"
+    "description": "Went for the frontside 360 to boardslide on the red hand rail, but I keep over rotating and I totally ate it off the one side!"
+} ...
+```
+
+**POST /spots/id/footage**
+
+- Logged in user can post footage at a spot
+
+Parameters:
+- id: Spot id
+- token: JWT of the logged in user
+
+Response:
+```
+{
+    "id": 1,
+    "spotId": 1,
+    "featureId" 1,
+    "userId" 1,
+    "title": "Huge bail on the red hand rail!"
+    "footage": "user1Video1.mp4"
+    "user": "CementSurfer"
+    "postDate": "April 1st, 2024"
+    "description": "Went for the frontside 360 to boardslide on the red hand rail, but I keep over rotating and I totally ate it off the one side!"
+} ...
+```
+
+**POST /users/register**
+
+- Add a user account
+
+Parameters:
+
+- username: User's input name
+- email: User's email
+- password: User's pwd
+- homepark_id: User's selected homepark
+- exposedContacts: ["www.insta.com.user", "www.youtube.com/user"] (optional)
+- isGroup: User selects if they are an individual or a group, this will effect future functionality
+
+Response:
+```
+{
+    "token": "abc123"
+}
+```
+
+**POST /users/login**
+
+- Login a user
+
+Parameters:
+- email: User's email
+- password: User's pwd
+
+Response:
+```
+{
+    "token": "abc123"
+}
+```
+
+
+### Auth
+
+- JWT auth
+    - Initially, all API requests will be using a fake user with id 1
+    - Store JWT in localStorage, remove when a user logs out
+    - Logged in state will modify UI based on mockups
 
 ## Roadmap
 
-Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation working back from the capstone due date. 
+- Create client
+    - react project with routes w boilerplate html/scss
 
----
+- Create server
+    - express project with routing, with placeholder responses
+
+- Create migrations
+
+- Gather 5 sample skatespot geolocations in Vancouver
+
+- Gather/fabricate data for spots table
+    -google
+
+- Gather/fabricate data for features table (1-5 features per spot)
+    -go skate!
+
+- Gather/fabriate data for footage table (1 clip per feature)
+    -go skate!
+    -ask friends, people on socials
+    -hold a few skate sessions
+
+- Gather/fabricate data for photos table (1 photo per feature, a homepage photo for the spot)
+    -can mine some of these from google, take photos of the others myself
+
+- Create seeds with sample data
+
+- Deploy client and server projects via Heroku and Netlify respectively
+
+- Feature: List skatespots from a given location
+    - Implement list spots page including location form
+    - Store given location in sessionStorage
+    - Create GET /spots endpoint
+
+- Feature: View skatespot
+    - Implement view skatespot page
+    - Create GET /spots/:id/footage
+    - Create GET /spots/:id/features
+
+- Feature: Home page
+
+- Feature: Create account
+    - Implement register page from header nav + form
+    - Create POST /users/register endpoint
+
+- Feature: Login
+    - Implement login page from header nav + form
+    - Create POST /users/login endpoint
+
+- Feature: Post Footage
+    - Implement upload page from spot page + form
+    - Create POST spots/:id/footage
+
+- Feature: Implement JWT tokens
+    - Server: Update expected requests / responses on protected endpoints
+    - Client: Store JWT in local storage, include JWT on axios calls
+
+- Bug fixes
+
+- DEMO DAY
 
 ## Future Implementations
-Your project will be marked based on what you committed to in the above document. Here, you can list any additional features you may complete after the MVP of your application is built, or if you have extra time before the Capstone due date.
+- Integrate Google Places / Maps
+    - Visual radius functionality
+- Ability to submit edits for spot information/details/features
+- Ability to like/upvote footage
+- Ability to comment on footage
+- Ability to like comments
+- A user home page to store uploaded videos
+- The ability to bookmark footage
+- Scrape "popular times" from google maps API
+
 
