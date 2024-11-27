@@ -1,10 +1,3 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
-
-.main-content {
-  @include desktop {
-    @include flexy-box-align(row, start, start);
-    height: auto;
-  }
-}
