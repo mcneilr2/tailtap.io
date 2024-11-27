@@ -1,0 +1,71 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+* {
+  background-color: white;
+  padding: 0rem;
+  margin: 0rem;
+  text-decoration: none;
+  font-family: "Telegraf";
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("/src/assets/font/PPTelegraf-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("/src/assets/font/PPTelegraf-Ultralight.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("/src/assets/font/PPTelegraf-Ultrabold.otf");
+  font-weight: 700;
+}
+
+h1 {
+  @include font-styling(1.5rem, 700, 2rem);
+  @include tablet {
+    @include font-styling(2.0625rem, 700, 2.75rem);
+  }
+}
+
+h2 {
+  @include font-styling(0.75rem, 700, 1.25rem);
+  @include tablet {
+    @include font-styling(0.75rem, 700, 1.25rem);
+  }
+}
+
+h3 {
+  @include font-styling(0.875rem, 700, 1.125rem);
+  @include tablet {
+    @include font-styling(0.875rem, 700, 1.375rem);
+  }
+}
+
+p {
+  @include font-styling(0.8125rem, 400, 1.125rem);
+  @include tablet {
+    @include font-styling(0.875rem, 400, 1.375rem);
+  }
+}
+
+label,
+.header__upload-button,
+.comments-form__button,
+a {
+  @include font-styling(0.625rem, 600, 1.25rem);
+  @include tablet {
+    @include font-styling(0.75rem, 700, 1.25rem);
+  }
+}

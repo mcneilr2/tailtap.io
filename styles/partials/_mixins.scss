@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+@mixin font-styling($size, $weight, $lineheight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineheight;
+}
+
+@mixin flexy-box-align($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin input-field-state-styling() {
+  border-radius: 0.25rem;
+  border: 0.0625rem solid lightgray;
+  outline: none;
+  &:active,
+  &:focus {
+    border: 0.125rem solid white;
+    border-radius: 0.25rem;
+  }
+  &:invalid {
+    border: 0.125rem solid red;
+    border-radius: 0.25rem;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}

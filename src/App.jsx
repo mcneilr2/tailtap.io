@@ -1,16 +1,19 @@
-import { useState } from 'react'
-import './App.scss'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Header from "./components/Header/Header";
+import YouTube from "react-youtube";
+import SpotsPage from "../pages/SpotsPage/SpotsPage";
+import { useState } from "react";
+import "./App.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <p>
-        Welcome to TailTap Front-End
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      {/* <Header /> */}
+      <Routes>
+        <Route path="/spots/:id" element={<SpotsPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
