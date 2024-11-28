@@ -2,7 +2,8 @@
 @use "./mixins" as *;
 
 * {
-  background-color: white;
+  background-color: black;
+  color: white;
   padding: 0rem;
   margin: 0rem;
   text-decoration: none;
@@ -17,7 +18,7 @@ textarea {
 @font-face {
   font-family: "Telegraf";
   src: url("/src/assets/font/PPTelegraf-Regular.otf");
-  font-weight: 400;
+  font-weight: 600;
 }
 
 @font-face {

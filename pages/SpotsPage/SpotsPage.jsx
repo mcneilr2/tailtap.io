@@ -28,17 +28,5 @@ export default function SpotsPage() {
     getSpot();
   }, [selectedSpotId]);
 
-  return (
-    <>
-      <YouTube videoId={activeSpot.homepage_video_id} />
-      {/* <section className = "main-content">
-            <article className = "current-video__section">
-                <VideoDetails activeVideo={activeVideo} />
-                <CommentsForm activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}/>
-                <CommentsList activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}  />
-            </article>
-            <NextVideosList activeVideo={activeVideo} baseUrl={baseUrl}/>
-        </section> */}
-    </>
-  );
+  return <>{/* <YouTube videoId={activeSpot.homepage_video_id} /> */}</>;
 }
