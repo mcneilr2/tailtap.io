@@ -1,3 +1,8 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
+
+iframe {
+  width: 100%;
+  padding: $mp;
+}

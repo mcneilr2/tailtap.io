@@ -3,17 +3,35 @@
 @use "../../styles/partials/global" as *;
 
 .header {
-  border: 2px dashed white;
   @include flexy-box-align(row, center, space-between);
   width: 100%;
-  height: 40vh;
+  height: auto;
+  border-bottom: 2px dashed $gravelGrey;
   &__vertical-container {
-    @include flexy-box-align(column, center, center);
+    @include flexy-box-align(column, start, center);
   }
   &__link-logo {
     height: 100%;
   }
   &__logo {
-    height: 100%;
+    max-height: 10rem;
+  }
+
+  &__title {
+    font-family: "Shlop";
+    letter-spacing: 0.2rem;
+    font-size: 3rem;
+    color: $gromGreen;
+  }
+  &__caption {
+    color: $thaneWhite;
+  }
+  &__button {
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 4rem;
   }
 }

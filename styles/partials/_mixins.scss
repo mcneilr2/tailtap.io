@@ -15,15 +15,15 @@
 
 @mixin input-field-state-styling() {
   border-radius: 0.25rem;
-  border: 0.0625rem solid lightgray;
+  border: 0.0625rem solid $thaneWhite;
   outline: none;
   &:active,
   &:focus {
-    border: 0.125rem solid white;
+    border: 0.125rem solid $thaneWhite;
     border-radius: 0.25rem;
   }
   &:invalid {
-    border: 0.125rem solid red;
+    border: 0.125rem solid $roadRashRed;
     border-radius: 0.25rem;
   }
 }
