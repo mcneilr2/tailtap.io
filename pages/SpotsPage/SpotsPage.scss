@@ -4,5 +4,55 @@
 
 iframe {
   width: 100%;
+  padding: $mp 0rem;
+  @include tablet {
+    padding: $lp 0rem;
+  }
+}
+
+.spot-page {
+  width: 100%;
   padding: $mp;
+  @include tablet {
+    padding: $lp;
+  }
+}
+
+.spot__detail {
+  &-icon {
+    width: 5rem;
+  }
+  &-icon--small {
+    height: 3rem;
+    padding-left: $mp;
+  }
+  &-container {
+    height: 10rem;
+  }
+  &-container,
+  &-container--vertical {
+    padding: $mp;
+    @include flexy-box-align(column, center, center);
+    width: 100%;
+    border: 2px solid $thaneWhite;
+    border-radius: 10px;
+  }
+  &-container--row {
+    padding: $mp 0rem;
+    border-bottom: 2px dashed $gravelGrey;
+    width: 100%;
+    @include flexy-box-align(row, center, start);
+  }
+  &-container--vertical {
+    @include flexy-box-align(column, center, center);
+  }
+  &-map {
+    border: none;
+  }
+  &-text {
+    color: $roadRashRed;
+  }
+  &-text-label {
+    margin-right: $mp;
+  }
 }

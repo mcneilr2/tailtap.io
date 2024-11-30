@@ -3,35 +3,45 @@
 @use "../../styles/partials/global" as *;
 
 .header {
-  @include flexy-box-align(row, center, space-between);
+  padding: $mp;
   width: 100%;
-  height: auto;
+  overflow: hidden;
+  flex-wrap: wrap;
+  @include flexy-box-align(row, center, space-between);
   border-bottom: 2px dashed $gravelGrey;
-  &__vertical-container {
-    @include flexy-box-align(column, start, center);
+  @include tablet {
+    padding: $lp;
+    @include flexy-box-align(row, center, center);
   }
-  &__link-logo {
-    height: 100%;
+  &__vertical-container {
+    margin: 0rem 5%;
+    @include flexy-box-align(column, start, center);
+    @include tablet {
+      margin-left: 15%;
+    }
   }
   &__logo {
-    max-height: 10rem;
-  }
-
-  &__title {
-    font-family: "Shlop";
-    letter-spacing: 0.2rem;
-    font-size: 3rem;
-    color: $gromGreen;
+    max-height: 6rem;
+    @include tablet {
+      max-height: 10rem;
+    }
   }
   &__caption {
     color: $thaneWhite;
   }
   &__button {
     border: none;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 3rem;
     width: 100%;
-    min-height: 4rem;
+    text-align: center;
+    color: $gromGreen;
+    line-height: 0.75rem;
+    @include tablet {
+      min-height: 4rem;
+      line-height: 1.5rem;
+    }
   }
 }

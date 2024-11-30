@@ -1,14 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-body {
-  @include flexy-box-align(column, center, center);
-}
-
-#root {
-  width: 100%;
-}
-
 * {
   background-color: $black;
   color: $thaneWhite;
@@ -47,32 +39,49 @@ textarea {
   font-weight: 400;
 }
 
-h2 {
-  @include font-styling(0.75rem, 700, 1.25rem);
+h1 {
+  font-family: "Shlop";
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  color: $gromGreen;
   @include tablet {
-    @include font-styling(0.75rem, 700, 1.25rem);
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  @include font-styling(1.25rem, 600, 2rem);
+  @include tablet {
+    @include font-styling(1.375rem, 600, 2.25rem);
   }
 }
 
 h3 {
-  @include font-styling(0.875rem, 600, 1.125rem);
+  color: $gromGreen;
+  @include font-styling(0.875rem, 700, 1.375rem);
   @include tablet {
-    @include font-styling(0.875rem, 700, 1.375rem);
+    @include font-styling(1.125rem, 700, 1.875rem);
   }
 }
 
 p {
-  @include font-styling(0.8125rem, 400, 1.125rem);
+  @include font-styling(0.875rem, 400, 1.125rem);
   @include tablet {
     @include font-styling(0.875rem, 400, 1.375rem);
   }
 }
 
 label,
-button,
 a {
-  @include font-styling(0.75rem, 700, 1.25rem);
+  @include font-styling(0.75rem, 600, 1.125rem);
   @include tablet {
-    @include font-styling(0.75rem, 700, 1.25rem);
+    @include font-styling(0.875rem, 600, 1.25rem);
+  }
+}
+
+button {
+  @include font-styling(0.75rem, 700, 1.375rem);
+  @include tablet {
+    @include font-styling(1.375rem, 700, 1.875rem);
   }
 }

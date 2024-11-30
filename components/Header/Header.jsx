@@ -21,13 +21,17 @@ export default function Header() {
         />
       </Link>
       <div className="header__vertical-container">
-        <h1 className="header__title">TAILTAP</h1>
-        <h3 className="header__caption">SKATE + LEARN + SHARE</h3>
+        <div className="header__text-container">
+          <h1 className="header__title">TAILTAP</h1>
+          <h3 className="header__caption">SKATE+LEARN+SHARE</h3>
+        </div>
         <button
           style={{ backgroundImage: `url(${skateboardGraphic})` }}
           className="header__button"
         >
-          Spot Finder
+          Spot
+          <br />
+          Finder!
         </button>
       </div>
     </header>
