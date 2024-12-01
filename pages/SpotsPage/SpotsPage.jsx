@@ -12,7 +12,7 @@ import notLit from "../../src/assets/images/not-lit.svg";
 import wet from "../../src/assets/images/wet_floor.svg";
 import swim from "../../src/assets/images/swim.svg";
 import emerg from "../../src/assets/images/emerg.svg";
-
+import dry from "../../src/assets/images/dry.svg";
 export default function SpotsPage() {
   const params = useParams();
   const selectedSpotId = params.id ? params.id : "";
@@ -21,6 +21,7 @@ export default function SpotsPage() {
   const baseUrl = `http://localhost:8080/spots`;
 
   const [activeSpot, setActiveSpot] = useState([]);
+  const [rainCoverage, setRainCoverage] = useState({});
 
   const getSpot = async () => {
     try {
@@ -30,6 +31,13 @@ export default function SpotsPage() {
         `http://localhost:8080/spots/${selectedSpotId}`
       );
       setActiveSpot(response.data);
+      if (response.data.weather_coverage == "Partial") {
+        setRainCoverage(wet);
+      } else if (response.data.weather_coverage == "Full") {
+        setRainCoverage(dry);
+      } else {
+        setRainCoverage(swim);
+      }
     } catch (error) {
       console.error("Error fetching video data", error);
     }
@@ -67,8 +75,8 @@ export default function SpotsPage() {
             <div className="spot__detail-rating">
               <Rating
                 readonly="true"
-                stop="10"
-                initialRating={activeSpot.occupancy_level}
+                stop="5"
+                initialRating={activeSpot.occupancy_level / 2}
                 emptySymbol={
                   <img className="spot__detail-rating-icon" src={emptyRating} />
                 }
@@ -83,8 +91,8 @@ export default function SpotsPage() {
             <div className="spot__detail-rating">
               <Rating
                 readonly="true"
-                stop="10"
-                initialRating={activeSpot.median_skill_level}
+                stop="5"
+                initialRating={activeSpot.median_skill_level / 2}
                 emptySymbol={
                   <img className="spot__detail-rating-icon" src={emptyRating} />
                 }
@@ -120,13 +128,11 @@ export default function SpotsPage() {
             </div>
             <div className="spot__detail-container--row">
               <label className="spot__detail-text-label">Rain Coverage:</label>
-              <p className="spot__detail-text">
-                {activeSpot.weather_coverage == "partial" ? "Partial" : "None"}
-              </p>
+              <p className="spot__detail-text">{activeSpot.weather_coverage}</p>
               <img
                 className="spot__detail-icon--small"
-                src={activeSpot.weather_coverage == "partial" ? wet : swim}
-                alt=""
+                src={rainCoverage}
+                alt="rain coverage icon"
               />
             </div>
           </div>
