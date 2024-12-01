@@ -99,4 +99,13 @@ iframe {
   &-text-label {
     margin-right: $mp;
   }
+  &-rating {
+    width: 100%;
+    @include flexy-box-align(row, center, center);
+    flex-wrap: nowrap;
+    padding-top: $mp;
+  }
+  &-rating-icon {
+    width: 3rem;
+  }
 }

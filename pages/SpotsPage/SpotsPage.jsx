@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import GaugeComponent from "react-gauge-component";
+import Rating from "react-rating";
 import axios from "axios";
 import "./SpotsPage.scss";
+import fullRating from "../../src/assets/images/full_helmet.svg";
+import emptyRating from "../../src/assets/images/empty_helmet.svg";
 import ramp from "../../src/assets/images/ramp.svg";
 import rail from "../../src/assets/images/rail.svg";
 import lit from "../../src/assets/images/lit.svg";
@@ -61,76 +63,36 @@ export default function SpotsPage() {
             />
           </div>
           <div className="spot__detail-container">
-            <h3 className="spot__detail-label">Activity Level</h3>
-            <GaugeComponent
-              className="spot__detail-icon--gauge"
-              arc={{
-                subArcs: [
-                  {
-                    limit: 20,
-                    color: "#5BE12C",
-                    showTick: true,
-                  },
-                  {
-                    limit: 40,
-                    color: "#F5CD19",
-                    showTick: true,
-                  },
-                  {
-                    limit: 60,
-                    color: "#F58B19",
-                    showTick: true,
-                  },
-                  {
-                    limit: 80,
-                    color: "#EA4228",
-                    showTick: true,
-                  },
-                  {
-                    limit: 100,
-                    color: "#EA4228",
-                    showTick: true,
-                  },
-                ],
-              }}
-              value={activeSpot.occupancy_level * 10}
-            />
+            <h3 className="spot__detail-label">Average Crowding</h3>
+            <div className="spot__detail-rating">
+              <Rating
+                readonly="true"
+                stop="10"
+                initialRating={activeSpot.occupancy_level}
+                emptySymbol={
+                  <img className="spot__detail-rating-icon" src={emptyRating} />
+                }
+                fullSymbol={
+                  <img className="spot__detail-rating-icon" src={fullRating} />
+                }
+              />
+            </div>
           </div>
           <div className="spot__detail-container">
             <h3 className="spot__detail-label">Median Skill Level</h3>
-            <GaugeComponent
-              className="spot__detail-icon--gauge"
-              arc={{
-                subArcs: [
-                  {
-                    limit: 20,
-                    color: "#5BE12C",
-                    showTick: true,
-                  },
-                  {
-                    limit: 40,
-                    color: "#F5CD19",
-                    showTick: true,
-                  },
-                  {
-                    limit: 60,
-                    color: "#F58B19",
-                    showTick: true,
-                  },
-                  {
-                    limit: 80,
-                    color: "#EA4228",
-                    showTick: true,
-                  },
-                  {
-                    limit: 100,
-                    color: "#EA4228",
-                    showTick: true,
-                  },
-                ],
-              }}
-              value={activeSpot.median_skill_level * 10}
-            />
+            <div className="spot__detail-rating">
+              <Rating
+                readonly="true"
+                stop="10"
+                initialRating={activeSpot.median_skill_level}
+                emptySymbol={
+                  <img className="spot__detail-rating-icon" src={emptyRating} />
+                }
+                fullSymbol={
+                  <img className="spot__detail-rating-icon" src={fullRating} />
+                }
+              />
+            </div>
           </div>
           <div className="spot__detail-container">
             <h3 className="spot__detail-label">Access</h3>
