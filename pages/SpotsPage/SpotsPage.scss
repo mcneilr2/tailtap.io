@@ -19,37 +19,81 @@ iframe {
 }
 
 .spot__detail {
+  &-label {
+    padding: $mp/2 $mp;
+    color: black;
+    background-color: $gromGreen;
+    border: 2px dashed $gravelGrey;
+    border-radius: 5px;
+  }
+  &-label--emerg {
+    color: $roadRashRed;
+    border-radius: 5px;
+  }
   &-icon {
-    width: 5rem;
+    border: 2px solid $roadRashRed;
+    padding: $mp;
+    border-radius: 5px;
   }
   &-icon--small {
-    height: 3rem;
+    height: 2rem;
     padding-left: $mp;
+    position: absolute;
+    left: 60%;
+  }
+  &-icon--gauge {
+    width: 100%;
+  }
+  &-icon--emerg {
+    height: 2rem;
   }
   &-container {
-    height: 10rem;
+    height: auto;
   }
   &-container,
   &-container--vertical {
+    margin-top: $mp;
     padding: $mp;
     @include flexy-box-align(column, center, center);
     width: 100%;
     border: 2px solid $thaneWhite;
     border-radius: 10px;
   }
+  &-container--emerg {
+    @include flexy-box-align(column, start, center);
+    width: 100%;
+    padding-left: $mp;
+  }
   &-container--row {
-    padding: $mp 0rem;
-    border-bottom: 2px dashed $gravelGrey;
+    margin-top: $mp;
+    padding: $mp;
+    border: 2px solid $thaneWhite;
+    border-radius: 10px;
     width: 100%;
     @include flexy-box-align(row, center, start);
   }
-  &-container--vertical {
-    @include flexy-box-align(column, center, center);
+  &-container--row-noborder {
+    width: 100%;
+    @include flexy-box-align(row, center, start);
+  }
+  &-container--row-emerg {
+    margin-top: $mp;
+    padding: $mp;
+    border: 2px dashed $roadRashRed;
+    border-radius: 10px;
+    width: 100%;
+    @include flexy-box-align(row, center, start);
   }
   &-map {
     border: none;
   }
   &-text {
+    color: $roadRashRed;
+    position: absolute;
+    left: 45%;
+  }
+  &-text--inline {
+    padding: $mp;
     color: $roadRashRed;
   }
   &-text-label {
