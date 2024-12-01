@@ -20,7 +20,7 @@ iframe {
 
 .spot__detail {
   &-label {
-    padding: $mp/2 $mp;
+    padding: calc($mp/2) $mp;
     color: black;
     background-color: $gromGreen;
     border: 2px dashed $gravelGrey;
@@ -57,7 +57,7 @@ iframe {
     @include flexy-box-align(column, center, center);
     width: 100%;
     border: 2px solid $thaneWhite;
-    border-radius: 10px;
+    border-radius: $mp;
   }
   &-container--emerg {
     @include flexy-box-align(column, start, center);

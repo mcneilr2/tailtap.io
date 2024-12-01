@@ -1,0 +1,40 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.homepage {
+  &-info > *,
+  &__list-item {
+    background-color: transparent;
+  }
+  &-info {
+    border: 2px solid $thaneWhite;
+    border-radius: $mp;
+    padding: $mp;
+    margin: $mp;
+  }
+  &__header {
+    padding: calc($mp/2) $mp;
+    color: black;
+    margin-bottom: $mp;
+    width: 100%;
+    background-color: $gromGreen;
+    border: 2px dashed $gravelGrey;
+    border-radius: 5px;
+  }
+}
+
+ol {
+  margin-left: $mp;
+}
+
+.homepage__title {
+  margin: $mp;
+}
+
+iframe {
+  margin: 0rem;
+  padding: 0rem;
+  border: 0rem;
+  height: 50vh;
+}
