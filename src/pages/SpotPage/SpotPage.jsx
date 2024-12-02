@@ -142,7 +142,7 @@ export default function SpotPage() {
                 <img
                   className="spot__detail-icon--small"
                   src={activeSpot.is_lit_night ? lit : notLit}
-                  alt=""
+                  alt="lighting icon"
                 />
               </div>
               <div className="spot__detail-container--row">

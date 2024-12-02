@@ -7,30 +7,6 @@ export default function HomePage() {
   const API_KEY = "AIzaSyDKUikUN4gMNU4j_sTR8hpQNl5vuhsjTag";
   const baseUrl = `http://localhost:8080/spots`;
 
-  //   const getSpot = async () => {
-  //     try {
-  //       const firstSpotId = (await axios.get(baseUrl)).data[0].id;
-  //       const selectedSpotId = params.id ? params.id : firstSpotId;
-  //       const response = await axios.get(
-  //         `http://localhost:8080/spots/${selectedSpotId}`
-  //       );
-  //       setActiveSpot(response.data);
-  //       if (response.data.weather_coverage == "Partial") {
-  //         setRainCoverage(wet);
-  //       } else if (response.data.weather_coverage == "Full") {
-  //         setRainCoverage(dry);
-  //       } else {
-  //         setRainCoverage(swim);
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching video data", error);
-  //     }
-  //   };
-
-  //   useEffect(() => {
-  //     getSpot();
-  //   }, [selectedSpotId]);
-
   return (
     <>
       <h2 className="homepage__title">About</h2>
