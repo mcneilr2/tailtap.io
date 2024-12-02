@@ -3,6 +3,14 @@
 @use "../../styles/partials/global" as *;
 
 .homepage {
+  &__horizontal-container {
+    @include desktop {
+      @include flexy-box-align(row, start, space-between);
+      height: 70vh;
+      width: 100%;
+      padding: 0rem 0rem $lp 0rem;
+    }
+  }
   &-info > *,
   &__list-item {
     background-color: transparent;
@@ -12,6 +20,14 @@
     border-radius: $mp;
     padding: $mp;
     margin: $mp;
+    @include tablet {
+      padding: $lp;
+      margin: $lp $lp 0rem $lp;
+    }
+    @include desktop {
+      height: 100%;
+      // margin-left: 0rem;
+    }
   }
   &__header {
     padding: calc($mp/2) $mp;
@@ -21,6 +37,9 @@
     background-color: $gromGreen;
     border: 2px dashed $gravelGrey;
     border-radius: 5px;
+    @include tablet {
+      margin-bottom: $lp;
+    }
   }
 }
 
@@ -30,11 +49,18 @@ ol {
 
 .homepage__title {
   margin: $mp;
+  @include tablet {
+    margin: $lp 0rem 0rem $lp;
+  }
 }
 
 iframe {
   margin: 0rem;
   padding: 0rem;
   border: 0rem;
-  height: 50vh;
+  height: 20vh;
+  width: 100%;
+  @include tablet {
+    height: 60vh;
+  }
 }

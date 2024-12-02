@@ -19,6 +19,9 @@
     @include tablet {
       margin-left: 15%;
     }
+    @include desktop {
+      margin-left: 30%;
+    }
   }
   &__logo {
     max-height: 6rem;

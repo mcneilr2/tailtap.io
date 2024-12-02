@@ -54,6 +54,7 @@ export default function SpotPage() {
         <h2 className="spot__title">{activeSpot.name}</h2>
         <div className="hero__video">
           <iframe
+            className="hero__video-frame"
             frameborder="0"
             allowfullscreen=""
             referrerpolicy="strict-origin-when-cross-origin"
@@ -171,7 +172,7 @@ export default function SpotPage() {
               src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${activeSpot.latitude},${activeSpot.longitude}`}
             ></iframe>
           </div>
-          <div className="spot__detail--row-small">
+          <div className="spot__detail--row-large">
             <div className="spot__detail-container--row">
               <h3 className="spot__detail-label">Address: </h3>
               <p className="spot__detail-text--inline">{activeSpot.address}</p>

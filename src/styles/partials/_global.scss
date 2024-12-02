@@ -67,7 +67,7 @@ p,
 li {
   @include font-styling(0.875rem, 400, 1.125rem);
   @include tablet {
-    @include font-styling(0.875rem, 400, 1.375rem);
+    @include font-styling(1.125rem, 400, 2rem);
   }
 }
 

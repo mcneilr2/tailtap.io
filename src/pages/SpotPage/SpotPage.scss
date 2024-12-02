@@ -2,8 +2,13 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
 
-iframe {
+.hero__video {
   width: 100%;
+  height: 60vh;
+  &-frame {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .spot-page {
@@ -16,20 +21,32 @@ iframe {
 
 .spot__title {
   padding-bottom: $mp;
+  @include tablet {
+    padding-bottom: $lp;
+  }
 }
 .spot__detail {
   &--row {
     width: 100%;
-    @include tablet {
+    @include desktop {
       @include flexy-box-align(row, start, center);
-      height: 60vh;
       margin-bottom: $lp;
+      height: 100%;
     }
   }
   &--row-small {
+    @include tablet {
+      @include flexy-box-align(row, center, center);
+      height: 25vh;
+      margin-top: $lp;
+    }
+  }
+  &--row-large {
     width: 100%;
     @include tablet {
       @include flexy-box-align(row, center, center);
+      height: 60vh;
+      margin-top: $lp;
     }
   }
   &-label {
@@ -37,16 +54,16 @@ iframe {
     color: black;
     background-color: $gromGreen;
     border: 2px dashed $gravelGrey;
-    border-radius: 5px;
+    border-radius: calc($mp/4);
   }
   &-label--emerg {
     color: $roadRashRed;
-    border-radius: 5px;
+    border-radius: calc($mp/4);
   }
   &-icon {
     border: 2px solid $roadRashRed;
     padding: $mp;
-    border-radius: 5px;
+    border-radius: calc($mp/4);
   }
   &-icon--small {
     height: 2rem;
@@ -68,14 +85,25 @@ iframe {
   }
   &-container,
   &-container--vertical {
-    height: 100%;
-    margin-top: $mp;
     padding: $mp;
     @include flexy-box-align(column, center, center);
     width: 100%;
+    margin: $mp 0rem $mp;
     border: 2px solid $thaneWhite;
     border-radius: $mp;
+    @include tablet {
+      margin-top: $lp;
+      padding: $lp;
+      margin: $lp 0rem $lp;
+      height: 100%;
+    }
   }
+  &-container--row {
+    @include tablet {
+      height: 100%;
+    }
+  }
+
   &-container--emerg {
     @include flexy-box-align(column, start, center);
     width: 100%;
@@ -87,9 +115,6 @@ iframe {
     border: 2px solid $thaneWhite;
     border-radius: 10px;
     @include flexy-box-align(row, center, start);
-    @include tablet {
-      width: 90vw;
-    }
   }
   &-container--row-noborder {
     width: 100%;
@@ -104,11 +129,17 @@ iframe {
     @include flexy-box-align(row, center, start);
     @include tablet {
       margin-left: $lp;
+      height: 100%;
     }
   }
   &-map {
     border: none;
     padding-top: $mp;
+    width: 100%;
+    height: 60vh;
+    @include tablet {
+      padding-top: $lp;
+    }
   }
   &-text {
     color: $roadRashRed;
@@ -130,8 +161,14 @@ iframe {
     @include flexy-box-align(row, center, center);
     flex-wrap: nowrap;
     padding-top: $mp;
+    @include tablet {
+      padding-top: $lp;
+    }
   }
   &-rating-icon {
     width: 3rem;
+    @include tablet {
+      width: 4rem;
+    }
   }
 }
