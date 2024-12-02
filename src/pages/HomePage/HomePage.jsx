@@ -46,7 +46,8 @@ export default function HomePage() {
             <br />
             <br />A "Skate Spot" is therefore anywhere
             skateboarders...well...skate. It could be a public skatepark, an
-            empty tennis court or your neighbours curb.
+            empty tennis court or your neighbours curb. At TailTap we believe
+            everyone who wants to skate should have access to these spaces.
           </p>
         </article>
         <article className="homepage-info">

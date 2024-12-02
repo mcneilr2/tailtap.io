@@ -2,18 +2,19 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "react-rating";
 import axios from "axios";
-import "./SpotsPage.scss";
-import fullRating from "../../src/assets/images/full_helmet.svg";
-import emptyRating from "../../src/assets/images/empty_helmet.svg";
-import ramp from "../../src/assets/images/ramp.svg";
-import rail from "../../src/assets/images/rail.svg";
-import lit from "../../src/assets/images/lit.svg";
-import notLit from "../../src/assets/images/not-lit.svg";
-import wet from "../../src/assets/images/wet_floor.svg";
-import swim from "../../src/assets/images/swim.svg";
-import emerg from "../../src/assets/images/emerg.svg";
-import dry from "../../src/assets/images/dry.svg";
-export default function SpotsPage() {
+import "./SpotPage.scss";
+import fullRating from "../../assets/images/full_helmet.svg";
+import emptyRating from "../../assets/images/empty_helmet.svg";
+import ramp from "../../assets/images/ramp.svg";
+import rail from "../../assets/images/rail.svg";
+import lit from "../../assets/images/lit.svg";
+import notLit from "../../assets/images/not-lit.svg";
+import wet from "../../assets/images/wet_floor.svg";
+import swim from "../../assets/images/swim.svg";
+import emerg from "../../assets/images/emerg.svg";
+import dry from "../../assets/images/dry.svg";
+
+export default function SpotPage() {
   const params = useParams();
   const selectedSpotId = params.id ? params.id : "";
   const API_KEY = "AIzaSyDKUikUN4gMNU4j_sTR8hpQNl5vuhsjTag";

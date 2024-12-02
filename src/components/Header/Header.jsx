@@ -1,9 +1,8 @@
-import skateboard from "../../src/assets/images/button.svg";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../src/assets/images/tailtap-logo.svg"; // Static logo (or first frame of the GIF)
-import animatedLogo from "../../src/assets/images/gif.gif"; // Animated GIF for hover
-import skateboardGraphic from "../../src/assets/images/button.svg";
+import logo from "../../assets/images/tailtap-logo.svg"; // Static logo (or first frame of the GIF)
+import animatedLogo from "../../assets/images/gif.gif"; // Animated GIF for hover
+import skateboardGraphic from "../../assets/images/button.svg";
 import "./Header.scss";
 
 export default function Header() {
@@ -25,14 +24,16 @@ export default function Header() {
           <h1 className="header__title">TAILTAP</h1>
           <h3 className="header__caption">SKATE+LEARN+SHARE</h3>
         </div>
-        <button
-          style={{ backgroundImage: `url(${skateboardGraphic})` }}
-          className="header__button"
-        >
-          Spot
-          <br />
-          Finder!
-        </button>
+        <Link className="header__link" to="/spots">
+          <button
+            style={{ backgroundImage: `url(${skateboardGraphic})` }}
+            className="header__button"
+          >
+            Spot
+            <br />
+            Finder!
+          </button>
+        </Link>
       </div>
     </header>
   );

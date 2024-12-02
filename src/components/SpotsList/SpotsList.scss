@@ -1,0 +1,32 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.list {
+  @include flexy-box-align(column, center, center);
+}
+.item {
+  @include flexy-box-align(column, flex-end, center);
+  list-style-type: none;
+  padding: $mp;
+  width: 100%;
+  border-top: 2px dashed $roadRashRed;
+  &__info {
+    grid-gap: $mp;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: $mp;
+  }
+
+  &__info-title {
+    color: $thaneWhite;
+    margin-bottom: 0.25rem;
+  }
+  &__button {
+    padding: calc($mp/2) $mp;
+    color: black;
+    background-color: $gromGreen;
+    border: 2px dashed $gravelGrey;
+    border-radius: 5px;
+  }
+}

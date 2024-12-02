@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "../components/Header/Header";
-import SpotsPage from "../pages/SpotsPage/SpotsPage";
-import HomePage from "../pages/HomePage/HomePage";
-import { useState } from "react";
+import Header from "../src/components/Header/Header";
+import SpotPage from "../src/pages/SpotPage/SpotPage";
+import SpotsPage from "../src/pages/SpotsPage/SpotsPage";
+import HomePage from "../src/pages/HomePage/HomePage";
 import "./App.scss";
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/spots/:id" element={<SpotsPage />} />
+        <Route path="/spots/:id" element={<SpotPage />} />
+        <Route path="/spots" element={<SpotsPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
