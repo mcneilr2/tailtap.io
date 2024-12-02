@@ -41,7 +41,7 @@ export default function SpotsList({ spots }) {
             </div>
           </div>
           <div className="item__actions">
-            <Link to="/spots/id" className="item__link">
+            <Link to={`/spots/${item.id}`} className="item__link">
               <button className="item__button">Find Out More!</button>
             </Link>
           </div>

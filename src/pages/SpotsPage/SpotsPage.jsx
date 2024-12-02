@@ -35,7 +35,7 @@ export default function SpotsPage() {
 
   return (
     <>
-      <h2 className="spotspage__title">Find a New Skate Spot!</h2>
+      <h2 className="spotspage__title">Spots</h2>
       <SpotsList spots={spotsList} headers={headers} />
       {/* <SpotsTable spots={spotsList} /> */}
     </>

@@ -51,7 +51,7 @@ export default function SpotPage() {
   return (
     <>
       <article className="spot-page">
-        <h2 className="spot__details-header">{activeSpot.name}</h2>
+        <h2 className="spot__title">{activeSpot.name}</h2>
         <div className="hero__video">
           <iframe
             frameborder="0"

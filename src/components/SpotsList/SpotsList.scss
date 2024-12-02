@@ -4,11 +4,12 @@
 
 .list {
   @include flexy-box-align(column, center, center);
+  padding: $mp;
 }
 .item {
   @include flexy-box-align(column, flex-end, center);
   list-style-type: none;
-  padding: $mp;
+  padding: $mp 0rem;
   width: 100%;
   border-top: 2px dashed $roadRashRed;
   &__info {
