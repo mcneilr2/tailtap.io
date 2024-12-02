@@ -3,6 +3,9 @@
 @use "../../styles/partials/global" as *;
 
 .list {
+  @include tablet {
+    display: none;
+  }
   @include flexy-box-align(column, center, center);
   padding: $mp;
 }
@@ -12,6 +15,9 @@
   padding: $mp 0rem;
   width: 100%;
   border-top: 2px dashed $roadRashRed;
+  &:last-child {
+    border-bottom: 2px dashed $roadRashRed;
+  }
   &__info {
     grid-gap: $mp;
     display: grid;

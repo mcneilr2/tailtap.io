@@ -10,16 +10,6 @@ export default function SpotsPage() {
 
   const [spotsList, setSpotsList] = useState([]);
 
-  const headers = [
-    { db_keys: ["name"], text: "SPOT NAME" },
-    { db_keys: ["address"], text: "ADDRESS" },
-    { db_keys: ["type"], text: "SPOT TYPE" },
-    { db_keys: ["hours"], text: "HOURS" },
-    { db_keys: ["is_public"], text: "COST" },
-    { db_keys: ["is_lit_night"], text: "NIGHTTIME LIGHTING" },
-    { db_keys: ["weather_coverage"], text: "WEATHER COVERAGE" },
-    { db_keys: ["occupancy_level"], text: "AVERAGE CROWDING" },
-  ];
   const getSpots = async () => {
     try {
       const response = await axios.get(`http://localhost:8080/spots/`);
@@ -35,9 +25,11 @@ export default function SpotsPage() {
 
   return (
     <>
-      <h2 className="spotspage__title">Spots</h2>
-      <SpotsList spots={spotsList} headers={headers} />
-      {/* <SpotsTable spots={spotsList} /> */}
+      <section className="spotspage">
+        <h2 className="spotspage__title">Spots</h2>
+        <SpotsList spots={spotsList} />
+        <SpotsTable spots={spotsList} />
+      </section>
     </>
   );
 }

@@ -1,0 +1,59 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.table {
+  display: none;
+  padding: $mp;
+  border-spacing: 0.5rem;
+  border: 2px solid $thaneWhite;
+  border-radius: 8px;
+  margin-top: $lp;
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    padding: $lp;
+  }
+  &__page-link {
+    width: $lp;
+    height: $lp;
+  }
+  &__details-link {
+    border: 2px dashed $gravelGrey;
+    border-radius: 4px;
+    padding: 0.25rem;
+    margin-top: $lp;
+  }
+  &__headers {
+    background-color: $gromGreen;
+    color: $gravelGrey;
+  }
+
+  &__header {
+    background-color: transparent;
+    &-sort {
+      background-color: transparent;
+    }
+  }
+
+  &__header-text {
+    @include flexy-box-align(row, center, start);
+    color: black;
+    padding: $mp;
+    background-color: transparent;
+    @include font-styling(0.875rem, 700, 1.375rem);
+    @include tablet {
+      @include font-styling(0.875rem, 700, 14px);
+    }
+  }
+
+  td {
+    padding: $mp 0rem;
+    border-bottom: 2px dashed $roadRashRed;
+  }
+
+  th {
+    border-radius: 0.5rem;
+  }
+}

@@ -3,7 +3,6 @@ import skateboard from "../../assets/images/button.svg";
 import "./SpotsList.scss";
 
 export default function SpotsList({ spots }) {
-  console.log(spots);
   return (
     <ul className="list">
       {spots.map((item) => (

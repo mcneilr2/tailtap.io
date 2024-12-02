@@ -3,8 +3,10 @@
 @use "../../styles/partials/global" as *;
 
 .spotspage {
-  width: 100%;
+  @include tablet {
+    padding: 0rem $lp;
+  }
   &__title {
-    margin: $mp 0rem 0rem $mp;
+    margin: $lp 0rem 0rem $mp;
   }
 }

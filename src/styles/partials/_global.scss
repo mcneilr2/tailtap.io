@@ -71,8 +71,7 @@ li {
   }
 }
 
-label,
-a {
+label {
   @include font-styling(0.75rem, 600, 1.125rem);
   @include tablet {
     @include font-styling(0.875rem, 600, 1.25rem);
