@@ -18,6 +18,20 @@ iframe {
   padding-bottom: $mp;
 }
 .spot__detail {
+  &--row {
+    width: 100%;
+    @include tablet {
+      @include flexy-box-align(row, start, center);
+      height: 60vh;
+      margin-bottom: $lp;
+    }
+  }
+  &--row-small {
+    width: 100%;
+    @include tablet {
+      @include flexy-box-align(row, center, center);
+    }
+  }
   &-label {
     padding: calc($mp/2) $mp;
     color: black;
@@ -39,6 +53,9 @@ iframe {
     padding-left: $mp;
     position: absolute;
     left: 60%;
+    @include tablet {
+      position: static;
+    }
   }
   &-icon--gauge {
     width: 100%;
@@ -51,6 +68,7 @@ iframe {
   }
   &-container,
   &-container--vertical {
+    height: 100%;
     margin-top: $mp;
     padding: $mp;
     @include flexy-box-align(column, center, center);
@@ -68,8 +86,10 @@ iframe {
     padding: $mp;
     border: 2px solid $thaneWhite;
     border-radius: 10px;
-    width: 100%;
     @include flexy-box-align(row, center, start);
+    @include tablet {
+      width: 90vw;
+    }
   }
   &-container--row-noborder {
     width: 100%;
@@ -82,6 +102,9 @@ iframe {
     border-radius: 10px;
     width: 100%;
     @include flexy-box-align(row, center, start);
+    @include tablet {
+      margin-left: $lp;
+    }
   }
   &-map {
     border: none;
@@ -91,6 +114,9 @@ iframe {
     color: $roadRashRed;
     position: absolute;
     left: 45%;
+    @include tablet {
+      position: static;
+    }
   }
   &-text--inline {
     padding: $mp;

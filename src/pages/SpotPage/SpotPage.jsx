@@ -62,81 +62,105 @@ export default function SpotPage() {
           ></iframe>
         </div>
         <section className="spot__details">
-          <div className="spot__detail-container">
-            <h3 className="spot__detail-label">Spot Type</h3>
-            <p className="spot__detail-text--inline">{activeSpot.type}</p>
-            <img
-              className="spot__detail-icon"
-              src={activeSpot.type == "Park" ? ramp : rail}
-              alt="spot type graphic"
-            />
-          </div>
-          <div className="spot__detail-container">
-            <h3 className="spot__detail-label">Average Crowding</h3>
-            <div className="spot__detail-rating">
-              <Rating
-                readonly="true"
-                stop="5"
-                initialRating={activeSpot.occupancy_level / 2}
-                emptySymbol={
-                  <img className="spot__detail-rating-icon" src={emptyRating} />
-                }
-                fullSymbol={
-                  <img className="spot__detail-rating-icon" src={fullRating} />
-                }
+          <div className="spot__detail--row">
+            <div className="spot__detail-container">
+              <h3 className="spot__detail-label">Spot Type</h3>
+              <p className="spot__detail-text--inline">{activeSpot.type}</p>
+              <img
+                className="spot__detail-icon"
+                src={activeSpot.type == "Park" ? ramp : rail}
+                alt="spot type graphic"
               />
             </div>
-          </div>
-          <div className="spot__detail-container">
-            <h3 className="spot__detail-label">Median Skill Level</h3>
-            <div className="spot__detail-rating">
-              <Rating
-                readonly="true"
-                stop="5"
-                initialRating={activeSpot.median_skill_level / 2}
-                emptySymbol={
-                  <img className="spot__detail-rating-icon" src={emptyRating} />
-                }
-                fullSymbol={
-                  <img className="spot__detail-rating-icon" src={fullRating} />
-                }
-              />
+            <div className="spot__detail-container">
+              <h3 className="spot__detail-label">Average Crowding</h3>
+              <div className="spot__detail-rating">
+                <Rating
+                  readonly="true"
+                  stop="5"
+                  initialRating={activeSpot.occupancy_level / 2}
+                  emptySymbol={
+                    <img
+                      className="spot__detail-rating-icon"
+                      src={emptyRating}
+                    />
+                  }
+                  fullSymbol={
+                    <img
+                      className="spot__detail-rating-icon"
+                      src={fullRating}
+                    />
+                  }
+                />
+              </div>
+            </div>
+            <div className="spot__detail-container">
+              <h3 className="spot__detail-label">Median Skill Level</h3>
+              <div className="spot__detail-rating">
+                <Rating
+                  readonly="true"
+                  stop="5"
+                  initialRating={activeSpot.median_skill_level / 2}
+                  emptySymbol={
+                    <img
+                      className="spot__detail-rating-icon"
+                      src={emptyRating}
+                    />
+                  }
+                  fullSymbol={
+                    <img
+                      className="spot__detail-rating-icon"
+                      src={fullRating}
+                    />
+                  }
+                />
+              </div>
             </div>
           </div>
           <div className="spot__detail-container">
             <h3 className="spot__detail-label">Access</h3>
-            <div className="spot__detail-container--row">
-              <label className="spot__detail-text-label">Open Hours:</label>
-              <p className="spot__detail-text">{activeSpot.hours}</p>
-            </div>
-            <div className="spot__detail-container--row">
-              <label className="spot__detail-text-label">Cost to Skate:</label>
-              <p className="spot__detail-text">
-                {activeSpot.is_public ? "Free!" : "Private"}
-              </p>
-            </div>
-            <div className="spot__detail-container--row">
-              <label className="spot__detail-text-label">Night Lighting:</label>
-              <p className="spot__detail-text">
-                {activeSpot.is_lit_night ? "It's Lit!" : "No Lights"}
-              </p>
-
-              <img
-                className="spot__detail-icon--small"
-                src={activeSpot.is_lit_night ? lit : notLit}
-                alt=""
-              />
-            </div>
-            <div className="spot__detail-container--row">
-              <label className="spot__detail-text-label">Rain Coverage:</label>
-              <p className="spot__detail-text">{activeSpot.weather_coverage}</p>
-              <img
-                className="spot__detail-icon--small"
-                src={rainCoverage}
-                alt="rain coverage icon"
-              />
+            <div className="spot__detail--row-small">
+              <div className="spot__detail-container--row">
+                <label className="spot__detail-text-label">Open Hours:</label>
+                <p className="spot__detail-text">{activeSpot.hours}</p>
+              </div>
+              <div className="spot__detail-container--row">
+                <label className="spot__detail-text-label">
+                  Cost to Skate:
+                </label>
+                <p className="spot__detail-text">
+                  {activeSpot.is_public ? "Free!" : "Private"}
+                </p>
+              </div>
+              <div className="spot__detail-container--row">
+                <label className="spot__detail-text-label">
+                  Night Lighting:
+                </label>
+                <p className="spot__detail-text">
+                  {activeSpot.is_lit_night ? "It's Lit!" : "No Lights"}
+                </p>
+                <img
+                  className="spot__detail-icon--small"
+                  src={activeSpot.is_lit_night ? lit : notLit}
+                  alt=""
+                />
+              </div>
+              <div className="spot__detail-container--row">
+                <label className="spot__detail-text-label">
+                  Rain Coverage:
+                </label>
+                <p className="spot__detail-text">
+                  {activeSpot.weather_coverage}
+                </p>
+                <img
+                  className="spot__detail-icon--small"
+                  src={rainCoverage}
+                  alt="rain coverage icon"
+                />
+              </div>
             </div>
           </div>
+
           <div className="spot__detail-container--vertical">
             <h3 className="spot__detail-label">Map</h3>
             <iframe
@@ -147,26 +171,28 @@ export default function SpotPage() {
               src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${activeSpot.latitude},${activeSpot.longitude}`}
             ></iframe>
           </div>
-          <div className="spot__detail-container--row">
-            <h3 className="spot__detail-label">Address: </h3>
-            <p className="spot__detail-text--inline">{activeSpot.address}</p>
-          </div>
-          <div className="spot__detail-container--row-emerg">
-            <img
-              className="spot__detail-icon--emerg"
-              src={emerg}
-              alt="emergency logo"
-            />
-            <div className="spot__detail-container--emerg">
-              <h3 className="spot__detail-label--emerg">Closest Hospital </h3>
-              <label className="spot__detail__text-abel">Name:</label>
-              <p className="spot__detail-text--inline-emerg">
-                {activeSpot.closest_hospital_name}
-              </p>
-              <label className="spot__detail__text-abel">Address:</label>
-              <p className="spot__detail-text--inline-emerg">
-                {activeSpot.closest_hospital_address}
-              </p>
+          <div className="spot__detail--row-small">
+            <div className="spot__detail-container--row">
+              <h3 className="spot__detail-label">Address: </h3>
+              <p className="spot__detail-text--inline">{activeSpot.address}</p>
+            </div>
+            <div className="spot__detail-container--row-emerg">
+              <img
+                className="spot__detail-icon--emerg"
+                src={emerg}
+                alt="emergency logo"
+              />
+              <div className="spot__detail-container--emerg">
+                <h3 className="spot__detail-label--emerg">Closest Hospital </h3>
+                <label className="spot__detail__text-abel">Name:</label>
+                <p className="spot__detail-text--inline-emerg">
+                  {activeSpot.closest_hospital_name}
+                </p>
+                <label className="spot__detail__text-abel">Address:</label>
+                <p className="spot__detail-text--inline-emerg">
+                  {activeSpot.closest_hospital_address}
+                </p>
+              </div>
             </div>
           </div>
         </section>
