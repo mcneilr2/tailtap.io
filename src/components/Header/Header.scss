@@ -3,24 +3,24 @@
 @use "../../styles/partials/global" as *;
 
 .header {
-  padding: $mp;
+  padding: $mp 0rem;
   width: 100%;
   overflow: hidden;
   flex-wrap: wrap;
-  @include flexy-box-align(row, center, space-between);
+  @include flexy-box-align(row, start, center);
   border-bottom: 2px dashed $gravelGrey;
   @include tablet {
+    flex-wrap: nowrap;
     padding: $lp;
     @include flexy-box-align(row, center, center);
   }
   &__vertical-container {
-    margin: 0rem 5%;
     @include flexy-box-align(column, start, center);
     @include tablet {
-      margin-left: 15%;
+      padding: 0rem $lp;
     }
     @include desktop {
-      margin-left: 30%;
+      padding: 0rem calc($dp * 2);
     }
   }
   &__logo {
@@ -40,12 +40,20 @@
     min-height: 3rem;
     width: 100%;
     text-align: center;
-    color: $gromGreen;
     line-height: 0.75rem;
     @include tablet {
       min-height: 4rem;
       line-height: 1.5rem;
     }
+  }
+  &__button--square {
+    border: none;
+    background-color: $gromGreen;
+    color: $black;
+    padding: calc($mp/2) $mp;
+    border: 2px dashed $gravelGrey;
+    border-radius: calc($mp/2);
+    margin-top: $mp;
   }
   &__link {
     width: 100%;

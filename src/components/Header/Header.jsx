@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/tailtap-logo.svg"; // Static logo (or first frame of the GIF)
 import animatedLogo from "../../assets/images/gif.gif"; // Animated GIF for hover
 import skateboardGraphic from "../../assets/images/button.svg";
+import Add from "../../assets/images/add.svg";
 import "./Header.scss";
 
 export default function Header() {
@@ -35,6 +36,9 @@ export default function Header() {
           </button>
         </Link>
       </div>
+      <Link className="header__link--upload" to="/upload">
+        <button className="header__button--square">Add A New Spot!</button>
+      </Link>
     </header>
   );
 }
