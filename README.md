@@ -96,35 +96,35 @@ Deployement
 
 #### Landing Page
 
-![](landing_page.png)
+![](./public/landing_page.pnglanding_page.png)
 
 #### Register Page
 
-![](create-user-page.png)
+![](./public/create-user-page.png)
 
 #### Login Page
 
-![](login_page.png)
+![](./public/login_page.png)
 
 #### Enter Location Page
 
-![](enter-location.png)
+![](./public/enter-location.png)
 
 #### View Spots Page
 
-![](view_spots.png)
+![](./public/view_spots.png)
 
 #### View Spot Page (Authorized User)
 
-![](view_spot_auth.png)
+![](./public/view_spot_auth.png)
 
 #### View Spot Page
 
-![](view_spot.png)
+![](./public/view_spot.png)
 
 ### Data
 
-![](schema.png)
+![](./public/schema.png)
 
 ### Endpoints
 
