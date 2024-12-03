@@ -11,6 +11,7 @@ export default function SpotForm() {
     is_lit_night: "0",
     is_public: "0",
   });
+
   const [errors, setErrors] = useState({});
   const [selectedType, setSelectedType] = useState("park");
   const [selectedCoverage, setSelectedCoverage] = useState("None");
@@ -75,15 +76,20 @@ export default function SpotForm() {
   };
 
   const handleRadioChange = (type) => {
+    console.log(type);
     if (type == "park" || type == "street") {
       setSelectedType(type);
+      setFormData({
+        ...formData,
+        type: type,
+      });
     } else {
       setSelectedCoverage(type);
+      setFormData({
+        ...formData,
+        weather_coverage: type,
+      });
     }
-    setFormData({
-      ...formData,
-      type: type,
-    });
   };
 
   const validate = () => {
