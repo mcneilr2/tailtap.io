@@ -35,8 +35,11 @@ export default function Header() {
             Finder!
           </button>
         </Link>
+        <Link className="header__link--upload" to="/upload">
+          <button className="header__button--square">Add A New Spot!</button>
+        </Link>
       </div>
-      <Link className="header__link--upload" to="/upload">
+      <Link className="header__link--upload-right" to="/upload">
         <button className="header__button--square">Add A New Spot!</button>
       </Link>
     </header>

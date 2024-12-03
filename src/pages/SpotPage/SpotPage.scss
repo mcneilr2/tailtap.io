@@ -35,6 +35,7 @@
     }
   }
   &--row-small {
+    width: 100%;
     @include tablet {
       @include flexy-box-align(row, center, center);
       height: 25vh;
@@ -98,9 +99,26 @@
       height: 100%;
     }
   }
+  &-container {
+    @include desktop {
+      height: 100%;
+      padding: $mp;
+      margin: 0rem;
+    }
+    &--large {
+      @include desktop {
+        padding: $lp;
+      }
+    }
+  }
   &-container--row {
     @include tablet {
       height: 100%;
+    }
+  }
+  &--row {
+    @include desktop {
+      height: 70vh;
     }
   }
 
@@ -132,11 +150,14 @@
       height: 100%;
     }
   }
+  &-container--wide {
+    width: 90%;
+  }
   &-map {
     border: none;
     padding-top: $mp;
     width: 100%;
-    height: 60vh;
+    height: 30vh;
     @include tablet {
       padding-top: $lp;
     }

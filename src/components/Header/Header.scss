@@ -15,9 +15,11 @@
     @include flexy-box-align(row, center, center);
   }
   &__vertical-container {
+    margin-left: 10%;
     @include flexy-box-align(column, start, center);
     @include tablet {
-      padding: 0rem $lp;
+      padding: 0rem $dp;
+      margin: 0rem;
     }
     @include desktop {
       padding: 0rem calc($dp * 2);
@@ -57,6 +59,19 @@
   }
   &__link {
     width: 100%;
+    height: 100%;
+  }
+  &__link--upload-right {
+    display: none;
+    @include tablet {
+      display: inline-block;
+    }
+    height: 100%;
+  }
+  &__link--upload {
+    @include tablet {
+      display: none;
+    }
     height: 100%;
   }
 }

@@ -95,7 +95,7 @@ export default function SpotPage() {
                 />
               </div>
             </div>
-            <div className="spot__detail-container">
+            <div className="spot__detail-container spot__detail-container--end">
               <h3 className="spot__detail-label">Median Skill Level</h3>
               <div className="spot__detail-rating">
                 <Rating
@@ -118,7 +118,7 @@ export default function SpotPage() {
               </div>
             </div>
           </div>
-          <div className="spot__detail-container">
+          <div className="spot__detail-container spot__detail-container--large">
             <h3 className="spot__detail-label">Access</h3>
             <div className="spot__detail--row-small">
               <div className="spot__detail-container--row">
@@ -173,7 +173,7 @@ export default function SpotPage() {
             ></iframe>
           </div>
           <div className="spot__detail--row-large">
-            <div className="spot__detail-container--row">
+            <div className="spot__detail-container--row spot__detail-container--wide">
               <h3 className="spot__detail-label">Address: </h3>
               <p className="spot__detail-text--inline">{activeSpot.address}</p>
             </div>
