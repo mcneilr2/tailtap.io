@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+   "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@vis.gl/react-google-maps": "^1.4.2",
     "ag-charts-enterprise": "^10.3.3",
     "ag-charts-react": "^10.3.3",
     "axios": "^1.7.7",
+    "gh-pages": "^6.2.0",
     "igniteui-react-core": "^18.7.4",
     "igniteui-react-gauges": "^18.7.4",
     "react": "^18.3.1",
