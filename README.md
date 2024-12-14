@@ -7,14 +7,14 @@
   <p align="center">
     TailTap is a platform for skateboarders to find and share information regarding skateboarding locations.
 <!--     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/github_username/repo_name">View Demo
     ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug
     ·
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature
   </p> -->
 </div>
 
@@ -48,23 +48,96 @@ There is no current single location to find this information, and there is nothi
 <h3>Front End</h3>
 <p align="left">
 
-  <a><img alt="React.js" src="https://img.shields.io/badge/React-%2320232A.svg?logo=react&logoColor=%2361DAFB"></a>
-    <a><img alt="Axios" src="https://img.shields.io/badge/Axios-%2361DAFB.svg?logo=axios&logoColor=black"></a>
-    <a><img alt="Vite" src="https://img.shields.io/badge/Vite-%23646CFF.svg?logo=vite&logoColor=white"></a>
-      <a><img alt="MySQL2" src="https://img.shields.io/badge/MySQL2-%2300f.svg?logo=mysql&logoColor=white"></a>
+  <img alt="React.js" src="https://img.shields.io/badge/React-%2320232A.svg?logo=react&logoColor=%2361DAFB">
+    <img alt="Axios" src="https://img.shields.io/badge/Axios-%2361DAFB.svg?logo=axios&logoColor=black">
+    <img alt="Vite" src="https://img.shields.io/badge/Vite-%23646CFF.svg?logo=vite&logoColor=white">
+      <img alt="MySQL2" src="https://img.shields.io/badge/MySQL2-%2300f.svg?logo=mysql&logoColor=white">
     </p>
     <h3>Back End</h3>
+
 <p align="left">
-  <a><img alt="SQLite3" src="https://img.shields.io/badge/SQLite3-%23003B57.svg?logo=sqlite&logoColor=white"></a>
-  <a><img alt="Node.js" src="https://img.shields.io/badge/Node.js-%23339933.svg?logo=nodedotjs&logoColor=white"></a>
-  <a><img alt="Express.js" src="https://img.shields.io/badge/Express.js-%23000000.svg?logo=express&logoColor=white"></a>
-    <a><img alt="Knex.js" src="https://img.shields.io/badge/Knex.js-%23339933.svg?logo=nodedotjs&logoColor=white"></a>
+  <img alt="SQLite3" src="https://img.shields.io/badge/SQLite3-%23003B57.svg?logo=sqlite&logoColor=white">
+  <img alt="Node.js" src="https://img.shields.io/badge/Node.js-%23339933.svg?logo=nodedotjs&logoColor=white">
+  <img alt="Express.js" src="https://img.shields.io/badge/Express.js-%23000000.svg?logo=express&logoColor=white">
+    <img alt="Knex.js" src="https://img.shields.io/badge/Knex.js-%23339933.svg?logo=nodedotjs&logoColor=white">
 </p>
 <h3>Deployment</h3>
 <p align="left">
-  <a><img alt="Heroku" src="https://img.shields.io/badge/Heroku-%23430098.svg?logo=heroku&logoColor=white"></a>
-  <a><img alt="Netlify" src="https://img.shields.io/badge/Netlify-%2300C7B7.svg?logo=netlify&logoColor=white"></a>
-  <a><img alt="GitHub" src="https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white"></a>
+  <img alt="Netlify" src="https://img.shields.io/badge/Netlify-%2300C7B7.svg?logo=netlify&logoColor=white">
+  <img alt="GitHub" src="https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white">
 </p>
+
+<h2>Getting Started</h2>
+
+To run this project, you need to clone and run the server first, then you can access the deployed front end to view the website and interact with the database.
+
+<h2>Prerequisites</h2>
+<h3>Install and Deploy Server</h3>
+
+  1.  Clone the server repo
+   ```sh
+   git clone https://github.com/mcneilr2/tailtap-server
+   ```
+  2.  Navigate to the root folder
+   ```sh
+   cd tailtap-server
+   ```
+  3.  Install dependancies
+   ```sh
+   npm install
+   ```
+  4.  Create .env file in root folder and populate with your own database credentials based on .env_sample
+   ```sh
+   git add .env
+   ```
+  5.  Run migrations and seed the database
+   ```sh
+   npx knex migrate:latest  
+   ```
+   ```sh
+   npx knex seed:run
+   ```
+
+<h3>Navigate to TailTap</h3>
+
+
+Netlify Deployment: [Link to Front-End](https://bright-fox-8fd2ba.netlify.app/)
+
+<h2>Roadmap</h2>
+
+- [ ] Add Usage Section to README.md
+- [ ] Improve Add-Spot styling
+- [ ] Add youtube link to spot upload feature
+- [ ] Add Features data to spot+spots pages
+    - [ ] Add Features Table to back-end
+- [ ] Create OAuth wall for Adding a Spot
+
+See the [Open Issues](https://github.com/mcneilr2/tailtap.io/issues) for a full list of proposed features (and known issues).
+
+<h2>Contributing</h2>
+
+Just like skateboarding, Tailtap is defined by the engagement of its community.  Any suggestions or upgrades are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request, and don't forget to give the repo a star!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<h2>Contact</h2>
+
+Robyn McNeil - [Linkedin](https://www.linkedin.com/in/mcneilrobyn/) - Email: robyn55555@gmail.com
+
+Project Link: [TailTap](https://github.com/mcneilr2/tailtap.io)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
 
 
