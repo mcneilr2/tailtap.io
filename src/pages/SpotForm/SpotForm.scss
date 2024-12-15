@@ -1,0 +1,49 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.page-header {
+  margin: $mp;
+}
+
+.form {
+  margin: $mp;
+  &__field {
+    @include flexy-box-align(row, center, left);
+    flex-wrap: wrap;
+    padding: $mp 0rem;
+    margin: calc($mp/2) 0rem;
+    border: 2px dashed $roadRashRed;
+    border-radius: $mp;
+    &--column {
+      @include flexy-box-align(column, start, center);
+    }
+    &--column-center {
+      @include flexy-box-align(column, center, center);
+    }
+    &--row {
+      @include flexy-box-align(row, center, center);
+    }
+  }
+  &__label {
+    margin: 0rem calc($mp/2);
+    @include font-styling(0.875rem, 700, 1.125rem);
+    &--radio {
+      margin: 0rem calc($mp/2);
+    }
+  }
+  &__input {
+    border: none;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid $gravelGrey;
+    &--wide {
+      min-width: 16rem;
+      text-align: center;
+      margin-top: $mp;
+    }
+  }
+}
+
+::placeholder {
+  color: $gromGreen;
+}

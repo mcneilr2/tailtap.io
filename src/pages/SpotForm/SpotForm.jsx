@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import errorIcon from "../../assets/images/error-24px.svg";
+import "./SpotForm.scss";
 
 export default function SpotForm() {
   const [formData, setFormData] = useState({
@@ -76,7 +77,6 @@ export default function SpotForm() {
   };
 
   const handleRadioChange = (type) => {
-    console.log(type);
     if (type == "park" || type == "street") {
       setSelectedType(type);
       setFormData({
@@ -149,7 +149,7 @@ export default function SpotForm() {
               name="name"
               id="name"
               onChange={handleChange}
-              placeholder="Spot Name"
+              placeholder="My favorite spot name!"
             />
             {errors.name && (
               <p className="form__error">
@@ -159,35 +159,33 @@ export default function SpotForm() {
             )}
           </div>
           <div className="form__field">
-            <fieldset>
-              <label className="form__label">Spot Type</label>
-              <label htmlFor="type" className="form__label--radio">
-                Skate Park
-              </label>
-              <input
-                className={`form__input${
-                  errors.type ? " form__input--error" : ""
-                }`}
-                type="radio"
-                name="type"
-                id="park"
-                onChange={() => handleRadioChange("park")}
-                checked={selectedType === "park"}
-              />
-              <label htmlFor="street" className="form__label--radio">
-                Street Spot
-              </label>
-              <input
-                className={`form__input${
-                  errors.type ? " form__input--error" : ""
-                }`}
-                type="radio"
-                name="type"
-                id="street"
-                onChange={() => handleRadioChange("street")}
-                checked={selectedType === "street"}
-              />
-            </fieldset>
+            <label className="form__label">Spot Type</label>
+            <label htmlFor="type" className="form__label--radio">
+              Skate Park
+            </label>
+            <input
+              className={`form__input${
+                errors.type ? " form__input--error" : ""
+              }`}
+              type="radio"
+              name="type"
+              id="park"
+              onChange={() => handleRadioChange("park")}
+              checked={selectedType === "park"}
+            />
+            <label htmlFor="street" className="form__label--radio">
+              Street Spot
+            </label>
+            <input
+              className={`form__input${
+                errors.type ? " form__input--error" : ""
+              }`}
+              type="radio"
+              name="type"
+              id="street"
+              onChange={() => handleRadioChange("street")}
+              checked={selectedType === "street"}
+            />
           </div>
           <div className="form__field">
             <label htmlFor="latitude" className="form__label">
@@ -197,11 +195,11 @@ export default function SpotForm() {
               className={`form__input${
                 errors.latitude ? " form__input--error" : ""
               }`}
-              type="number"
+              type="text"
               name="latitude"
               id="latitude"
               onChange={handleChange}
-              placeholder="Latitude"
+              placeholder="00.000000000"
             />
             {errors.latitude && (
               <p className="form__error">
@@ -218,11 +216,11 @@ export default function SpotForm() {
               className={`form__input${
                 errors.longitude ? " form__input--error" : ""
               }`}
-              type="number"
+              type="text"
               name="longitude"
               id="longitude"
               onChange={handleChange}
-              placeholder="Longitude"
+              placeholder="00.000000000"
             />
             {errors.longitude && (
               <p className="form__error">
@@ -243,7 +241,7 @@ export default function SpotForm() {
               name="address"
               id="address"
               onChange={handleChange}
-              placeholder="Street Address"
+              placeholder="111 Doakickflip Dr"
             />
             {errors.address && (
               <p className="form__error">
@@ -264,7 +262,7 @@ export default function SpotForm() {
               name="hours"
               id="hours"
               onChange={handleChange}
-              placeholder="Hours"
+              placeholder="24hrs/day"
             />
             {errors.hours && (
               <p className="form__error">
@@ -300,11 +298,11 @@ export default function SpotForm() {
             />
           </div>
         </div>
-        <div className="form__field">
-          <fieldset>
-            <label className="form__label">
-              Does this spot have weather coverage?
-            </label>
+        <div className="form__field  form__field--column">
+          <label className="form__label">
+            Does this spot have weather coverage?
+          </label>
+          <div className="form__field--row">
             <label htmlFor="dry" className="form__label--radio">
               Covered/Indoors
             </label>
@@ -318,6 +316,8 @@ export default function SpotForm() {
               onChange={() => handleRadioChange("Full")}
               checked={selectedCoverage === "Full"}
             />
+          </div>
+          <div className="form__field--row">
             <label htmlFor="wet" className="form__label--radio">
               Partial (could have wet floors)
             </label>
@@ -331,6 +331,8 @@ export default function SpotForm() {
               onChange={() => handleRadioChange("Partial")}
               checked={selectedCoverage === "Partial"}
             />
+          </div>
+          <div className="form__field--row">
             <label htmlFor="swim" className="form__label--radio">
               None/Outdoors
             </label>
@@ -344,49 +346,49 @@ export default function SpotForm() {
               onChange={() => handleRadioChange("None")}
               checked={selectedCoverage === "None"}
             />
-          </fieldset>
-          <div className="form__field">
-            <label htmlFor="occupancy_level" className="form__label">
-              Average Level of Crowding (0-10)
-            </label>
-            <input
-              className={`form__input${
-                errors.occupancy_level ? " form__input--error" : ""
-              }`}
-              type="number"
-              name="occupancy_level"
-              id="occupancy_level"
-              onChange={handleChange}
-              placeholder="Estimate how crowded this spot is"
-            />
-            {errors.occupancy_level && (
-              <p className="form__error">
-                <img src={errorIcon} alt="error" />
-                {errors.occupancy_level}
-              </p>
-            )}
           </div>
-          <div className="form__field">
-            <label htmlFor="medians" className="form__label">
-              Average Skill Level at Spot (0-10)
-            </label>
-            <input
-              className={`form__input${
-                errors.median_skill_level ? " form__input--error" : ""
-              }`}
-              type="number"
-              name="median_skill_level"
-              id="median_skill_level"
-              onChange={handleChange}
-              placeholder="Estimate the skill level of skaters at this spot"
-            />
-            {errors.median_skill_level && (
-              <p className="form__error">
-                <img src={errorIcon} alt="error" />
-                {errors.median_skill_level}
-              </p>
-            )}
-          </div>
+        </div>
+        <div className="form__field form__field--column-center">
+          <label htmlFor="occupancy_level" className="form__label">
+            Average Level of Crowding (0-10)
+          </label>
+          <input
+            className={`form__input${
+              errors.occupancy_level ? " form__input--error" : ""
+            } form__input--wide`}
+            type="number"
+            name="occupancy_level"
+            id="occupancy_level"
+            onChange={handleChange}
+            placeholder="Estimate how crowded this spot is"
+          />
+          {errors.occupancy_level && (
+            <p className="form__error">
+              <img src={errorIcon} alt="error" />
+              {errors.occupancy_level}
+            </p>
+          )}
+        </div>
+        <div className="form__field form__field--column-center">
+          <label htmlFor="medians" className="form__label">
+            Average Skill Level at Spot (0-10)
+          </label>
+          <input
+            className={`form__input${
+              errors.median_skill_level ? " form__input--error" : ""
+            } form__input--wide`}
+            type="number"
+            name="median_skill_level"
+            id="median_skill_level"
+            onChange={handleChange}
+            placeholder="Estimate the skill level of skaters at this spot"
+          />
+          {errors.median_skill_level && (
+            <p className="form__error">
+              <img src={errorIcon} alt="error" />
+              {errors.median_skill_level}
+            </p>
+          )}
         </div>
         <div className="form__section form__section--actions">
           <Link to="/">
