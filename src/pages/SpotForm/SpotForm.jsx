@@ -166,7 +166,7 @@ export default function SpotForm() {
             <input
               className={`form__input${
                 errors.type ? " form__input--error" : ""
-              }`}
+              } form__input--radio`}
               type="radio"
               name="type"
               id="park"
@@ -179,7 +179,7 @@ export default function SpotForm() {
             <input
               className={`form__input${
                 errors.type ? " form__input--error" : ""
-              }`}
+              } form__input--radio`}
               type="radio"
               name="type"
               id="street"
@@ -276,7 +276,7 @@ export default function SpotForm() {
               Is it free to skate here?
             </label>
             <input
-              className={`form__input`}
+              className={`form__input form__input--radio`}
               type="checkbox"
               name="is_public"
               id="is_public"
@@ -290,7 +290,7 @@ export default function SpotForm() {
             <input
               className={`form__input${
                 errors.is_lit_night ? " form__input--error" : ""
-              }`}
+              } form__input--radio`}
               type="checkbox"
               name="is_lit_night"
               id="is_lit_night"
@@ -309,7 +309,7 @@ export default function SpotForm() {
             <input
               className={`form__input${
                 errors.type ? " form__input--error" : ""
-              }`}
+              }  form__input--radio`}
               type="radio"
               name="dry"
               id="dry"
@@ -324,7 +324,7 @@ export default function SpotForm() {
             <input
               className={`form__input${
                 errors.type ? " form__input--error" : ""
-              }`}
+              } form__input--radio`}
               type="radio"
               name="wet"
               id="wet"
@@ -339,7 +339,7 @@ export default function SpotForm() {
             <input
               className={`form__input${
                 errors.type ? " form__input--error" : ""
-              }`}
+              } form__input--radio`}
               type="radio"
               name="swim"
               id="swim"
@@ -348,47 +348,57 @@ export default function SpotForm() {
             />
           </div>
         </div>
-        <div className="form__field form__field--column-center">
-          <label htmlFor="occupancy_level" className="form__label">
-            Average Level of Crowding (0-10)
-          </label>
-          <input
-            className={`form__input${
-              errors.occupancy_level ? " form__input--error" : ""
-            } form__input--wide`}
-            type="number"
-            name="occupancy_level"
-            id="occupancy_level"
-            onChange={handleChange}
-            placeholder="Estimate how crowded this spot is"
-          />
-          {errors.occupancy_level && (
-            <p className="form__error">
-              <img src={errorIcon} alt="error" />
-              {errors.occupancy_level}
-            </p>
-          )}
-        </div>
-        <div className="form__field form__field--column-center">
-          <label htmlFor="medians" className="form__label">
-            Average Skill Level at Spot (0-10)
-          </label>
-          <input
-            className={`form__input${
-              errors.median_skill_level ? " form__input--error" : ""
-            } form__input--wide`}
-            type="number"
-            name="median_skill_level"
-            id="median_skill_level"
-            onChange={handleChange}
-            placeholder="Estimate the skill level of skaters at this spot"
-          />
-          {errors.median_skill_level && (
-            <p className="form__error">
-              <img src={errorIcon} alt="error" />
-              {errors.median_skill_level}
-            </p>
-          )}
+        <div className="form__row-container">
+          <div className="form__field form__field--column-center">
+            <label
+              htmlFor="occupancy_level"
+              className="form__label form__label--center"
+            >
+              Average Level of Crowding <br />
+              (0-10)
+            </label>
+            <input
+              className={`form__input${
+                errors.occupancy_level ? " form__input--error" : ""
+              } form__input--wide`}
+              type="number"
+              name="occupancy_level"
+              id="occupancy_level"
+              onChange={handleChange}
+              placeholder="Estimate how crowded this spot is"
+            />
+            {errors.occupancy_level && (
+              <p className="form__error">
+                <img src={errorIcon} alt="error" />
+                {errors.occupancy_level}
+              </p>
+            )}
+          </div>
+          <div className="form__field form__field--column-center">
+            <label
+              htmlFor="medians"
+              className="form__label form__label--center"
+            >
+              Average Skill Level at Spot <br />
+              (0-10)
+            </label>
+            <input
+              className={`form__input${
+                errors.median_skill_level ? " form__input--error" : ""
+              } form__input--wide`}
+              type="number"
+              name="median_skill_level"
+              id="median_skill_level"
+              onChange={handleChange}
+              placeholder="Estimate average skill level"
+            />
+            {errors.median_skill_level && (
+              <p className="form__error">
+                <img src={errorIcon} alt="error" />
+                {errors.median_skill_level}
+              </p>
+            )}
+          </div>
         </div>
         <div className="form__section form__section--actions">
           <Link to="/">

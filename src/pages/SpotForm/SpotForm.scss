@@ -4,10 +4,16 @@
 
 .page-header {
   margin: $mp;
+  @include tablet {
+    margin: $lp;
+  }
 }
 
 .form {
   margin: $mp;
+  @include tablet {
+    margin: $lp;
+  }
   &__field {
     @include flexy-box-align(row, center, left);
     flex-wrap: wrap;
@@ -15,11 +21,24 @@
     margin: calc($mp/2) 0rem;
     border: 2px dashed $roadRashRed;
     border-radius: $mp;
+    @include tablet {
+      margin: $mp 0rem;
+      width: 100%;
+    }
     &--column {
       @include flexy-box-align(column, start, center);
     }
     &--column-center {
       @include flexy-box-align(column, center, center);
+      @include tablet {
+        width: 100%;
+        @include tablet {
+          margin-right: $mp;
+        }
+        &:last-child {
+          margin: 0rem;
+        }
+      }
     }
     &--row {
       @include flexy-box-align(row, center, center);
@@ -28,22 +47,68 @@
   &__label {
     margin: 0rem calc($mp/2);
     @include font-styling(0.875rem, 700, 1.125rem);
+    @include tablet {
+      @include font-styling(1.125rem, 700, 1.5rem);
+      margin: 0rem $mp;
+    }
     &--radio {
       margin: 0rem calc($mp/2);
+    }
+    &--center {
+      text-align: center;
     }
   }
   &__input {
     border: none;
     padding-bottom: 0.25rem;
     border-bottom: 2px solid $gravelGrey;
+    @include tablet {
+      height: 2rem;
+      min-width: 12rem;
+    }
+
     &--wide {
       min-width: 16rem;
       text-align: center;
       margin-top: $mp;
+      @include tablet {
+        min-width: 18rem;
+      }
+    }
+  }
+  &__input--radio {
+    @include tablet {
+      min-width: 1.5rem;
+    }
+  }
+  &__section--actions {
+    margin: $mp 0rem;
+    @include flexy-box-align(row, center, center);
+  }
+  &__button {
+    border: 2px solid $gravelGrey;
+    height: 100%;
+    padding: $mp;
+    border-radius: $mp;
+  }
+  &__button--cancel {
+    margin-right: $mp;
+    color: $roadRashRed;
+  }
+  &__button--submit {
+    color: $gromGreen;
+  }
+  &__row-container {
+    @include tablet {
+      @include flexy-box-align(row, center, space-between);
     }
   }
 }
 
-::placeholder {
+::placeholder,
+.form__label--radio {
   color: $gromGreen;
+  @include tablet {
+    @include font-styling(1.125rem, 400, 1.5rem);
+  }
 }
