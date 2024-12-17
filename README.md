@@ -109,7 +109,7 @@ npx knex seed:run
 
 <h3>Navigate to TailTap</h3>
 
-Netlify Deployment: [Link to Front-End](https://bright-fox-8fd2ba.netlify.app/)
+Netlify Deployment: [Link to Front-End](https://tailtap.netlify.app/)
 
 <h2>Roadmap</h2>
 
