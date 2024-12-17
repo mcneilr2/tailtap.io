@@ -5,7 +5,7 @@
 <h1 align="center">TailTap</h1>
 
   <p align="center">
-    TailTap is a platform for skateboarders to find and share information regarding skateboarding locations.
+    TailTap is for skateboarders.
 <!--     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong>
     <br />
@@ -114,7 +114,7 @@ Netlify Deployment: [Link to Front-End](https://bright-fox-8fd2ba.netlify.app/)
 <h2>Roadmap</h2>
 
 - [ ] Add Usage Section to README.md
-- [ ] Improve Add-Spot styling
+- [x] Improve Add-Spot styling
 - [ ] Add youtube link to spot upload feature
 - [ ] Add Features data to spot+spots pages
   - [ ] Add Features Table to back-end
